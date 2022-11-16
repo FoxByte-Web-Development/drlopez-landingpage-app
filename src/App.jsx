@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import Button from "./Components/Button/button-componet";
 import "./App.css";
 
 function App() {
@@ -10,6 +10,8 @@ function App() {
       <h1 className="text-3xl font-bold underline">
         Hello world with tailwind!{" "}
       </h1>
+      <Button>Button fill</Button>
+      <Button variant="secondary">Button with border</Button>
     </div>
   );
 }
