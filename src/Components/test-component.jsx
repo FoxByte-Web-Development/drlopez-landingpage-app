@@ -1,13 +1,11 @@
-import React from 'react'
-import Button from './Button/button-componet'
-export default function Test() {
+import NavBar from "./Navbar/navbar-component";
+
+const Test = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world with tailwind!{' '}
-      </h1>
-      <Button>Button fill</Button>
-      <Button variant="secondary">Button with border</Button>
+      <NavBar />
     </div>
-  )
-}
+  );
+};
+
+export default Test;
