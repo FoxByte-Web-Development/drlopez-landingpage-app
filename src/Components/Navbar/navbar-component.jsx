@@ -10,9 +10,9 @@ const NavBar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <div className="top-0 left-0 w-full border shadow-lg">
+    <div className="top-0 left-0 w-full rounded-lg shadow-md">
       <div className="items-center justify-between py-4 px-7 md:flex md:px-10">
-        <div className="flex cursor-pointer items-center font-bold text-gray-800">
+        <div className="text-gray-800 flex cursor-pointer items-center font-bold">
           <span className="cursor-pointer ">
             <img className="inline h-10 px-2" src={logoSrc} />
             LOGO
@@ -35,7 +35,7 @@ const NavBar = () => {
             <li key={link.name} className="my-7 md:my-0 md:ml-8">
               <a
                 href={link.to}
-                className="hover:underline hover:decoration-teal-700 hover:decoration-4 hover:underline-offset-8"
+                className="hover:underline hover:decoration-teal-blue hover:decoration-4 hover:underline-offset-8"
               >
                 {link.name}
               </a>
