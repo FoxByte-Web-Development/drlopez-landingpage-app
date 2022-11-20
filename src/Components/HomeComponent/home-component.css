@@ -1,0 +1,12 @@
+.emailbox {
+  width: 542px;
+  height: 108px;
+  background-color: #f3f3f3;
+}
+
+.elipse {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: #378972;
+}
