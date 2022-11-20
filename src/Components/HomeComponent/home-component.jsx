@@ -5,16 +5,16 @@ import FotoDoctor from '../../Images/FotoDoctor.jpg'
 
 export default function HomeComponent() {
   return (
-    <div className="content-center">
-      <div className="grid grid-cols-2 gap-x-[700px]">
-        <div className="text-left w-max">
+    <div className='flex justify-center'>
+      <div className="grid grid-cols-2 gap-x-96 grid-flow-row">
+        <div className="text-left">
           <p className="text-5xl text-secundary-color font-bold ">
             Lorem ipsum dolor sit amet
           </p>
           <p className="text-5xl text-primary-color font-bold">
             consectetur adipiscing
           </p>
-          <p className="text-xl mt-9" style={{ width: '652px' }}>
+          <p className="text-xl mt-9">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -61,7 +61,7 @@ export default function HomeComponent() {
             </div>
           </div>
         </div>
-        <div className="w-max">
+        <div>
           <div>
             <img
               src={FotoDoctor}
