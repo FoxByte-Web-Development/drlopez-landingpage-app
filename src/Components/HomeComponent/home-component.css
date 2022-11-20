@@ -3,10 +3,25 @@
   height: 108px;
   background-color: #f3f3f3;
 }
+body {
+  margin: 0%;
+}
 
 .elipse {
   position: absolute;
   width: 55px;
   height: 55px;
   background: #378972;
+}
+
+.text {
+  width: 150px;
+}
+
+.text-primary-color {
+  color: #378972;
+}
+
+.text-secundary-color {
+  color: #1e1e1e;
 }
