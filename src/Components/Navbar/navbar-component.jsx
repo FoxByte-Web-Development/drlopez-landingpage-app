@@ -12,9 +12,9 @@ const NavBar = () => {
   return (
     <div className="top-0 left-0 w-full rounded-lg shadow-md">
       <div className="items-center justify-between py-4 px-7 md:flex md:px-10">
-        <div className="text-gray-800 flex cursor-pointer items-center font-bold">
+        <div className="flex cursor-pointer items-center font-bold">
           <span className="cursor-pointer ">
-            <img className="inline h-10 px-2" src={logoSrc} />
+            <img className="inline h-7 px-2" src={logoSrc} />
             LOGO
           </span>
         </div>
