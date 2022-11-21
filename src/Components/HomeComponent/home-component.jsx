@@ -1,26 +1,26 @@
-import React from 'react'
-import Button from '../Button/button-componet'
-import './home-component.css'
-import FotoDoctor from '../../Images/FotoDoctor.jpg'
+import React from "react";
+import Button from "../Button/button-componet";
+import "./home-component.css";
+import FotoDoctor from "../../Images/FotoDoctor.png";
 
 export default function HomeComponent() {
   return (
-    <div className='flex justify-center'>
-      <div className="grid grid-cols-2 gap-x-96 grid-flow-row">
+    <div className="sm:ml-auto lg:ml-[7%]">
+      <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="text-left">
-          <p className="text-5xl text-secundary-color font-bold ">
+          <p className="text-secundary-color text-5xl font-bold ">
             Lorem ipsum dolor sit amet
           </p>
-          <p className="text-5xl text-primary-color font-bold">
+          <p className="text-primary-color text-5xl font-bold">
             consectetur adipiscing
           </p>
-          <p className="text-xl mt-9">
+          <p className="mt-9 text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat
           </p>
-          <div className="grid grid-cols-[100px_minmax(50px,_1fr)_200px] gap-x-0 emailbox mt-9 rounded-lg shadow-lg">
+          <div className="emailbox mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_200px] gap-x-0 rounded-lg shadow-lg">
             <div>
               <div className="elipse mt-6 ml-7 rounded-full">
                 <svg
@@ -43,7 +43,7 @@ export default function HomeComponent() {
               </div>
             </div>
             <div className="text mt-6">
-              <p style={{ color: '#6F6F6F' }}>Our email adress</p>
+              <p style={{ color: "#6F6F6F" }}>Our email adress</p>
               <p className="font-bold">fakeemail@gmail.com</p>
             </div>
             <div>
@@ -52,7 +52,7 @@ export default function HomeComponent() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-[150px_minmax(900px,_1fr)_300px] mt-12">
+          <div className="mt-12 grid grid-cols-[150px_minmax(900px,_1fr)_300px]">
             <div>
               <Button variant="secondary">Scroll Down</Button>
             </div>
@@ -63,14 +63,11 @@ export default function HomeComponent() {
         </div>
         <div>
           <div>
-            <img
-              src={FotoDoctor}
-              alt="fotodoctor"
-              style={{ width: '370px', height: '459px' }}
-            />
+            <img src={FotoDoctor} alt="fotodoctor" />
           </div>
+          <div></div>
         </div>
       </div>
     </div>
-  )
+  );
 }
