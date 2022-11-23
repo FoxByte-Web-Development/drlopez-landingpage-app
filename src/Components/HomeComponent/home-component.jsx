@@ -2,12 +2,13 @@ import React from "react";
 import Button from "../Button/button-componet";
 import "./home-component.css";
 import FotoDoctor from "../../Images/FotoDoctor.png";
+import FourPeople from "../../Images/FourPeople.png";
 
 export default function HomeComponent() {
   return (
-    <div className="sm:ml-auto lg:ml-[7%]">
+    <div className="sm:ml-auto md:ml-[7%] lg:ml-[15%]">
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
-        <div className="text-left">
+        <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
             Lorem ipsum dolor sit amet
           </p>
@@ -29,7 +30,7 @@ export default function HomeComponent() {
                   viewBox="0 0 27 23"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mt-4 ml-3"
+                  className="mt-4 ml-[14px]"
                 >
                   <path
                     d="M4.44648 0C1.99075 0 0 1.99075 0 4.44648V4.89402L13.3397 12.0769L26.6789 4.89426V4.44648C26.6789 1.99075 24.6882 0 22.2324 0H4.44648Z"
@@ -47,7 +48,7 @@ export default function HomeComponent() {
               <p className="font-bold">fakeemail@gmail.com</p>
             </div>
             <div>
-              <div className="mt-7">
+              <div className="mt-9">
                 <Button>Get Copied</Button>
               </div>
             </div>
@@ -65,7 +66,14 @@ export default function HomeComponent() {
           <div>
             <img src={FotoDoctor} alt="fotodoctor" />
           </div>
-          <div></div>
+          <div className=" text-primary-color ml-[13%] mt-10 font-bold">
+            <p>Dr. Carlos Regalado</p>
+            <hr className="horizontal-line-color mt-4 ml-2 w-[115px]" />
+            <img src={FourPeople} alt="fourpeople" className=" mt-4" />
+            <p className=" ml-2 w-[127px] text-center">
+              patients have chosen his service
+            </p>
+          </div>
         </div>
       </div>
     </div>
