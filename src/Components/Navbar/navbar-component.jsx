@@ -35,7 +35,7 @@ const NavBar = () => {
             <li key={link.name} className="my-7 md:my-0 md:ml-8">
               <a
                 href={link.to}
-                className="hover:underline hover:decoration-teal-blue hover:decoration-4 hover:underline-offset-8"
+                className="hover:underline hover:decoration-teal-2 hover:decoration-4 hover:underline-offset-8"
               >
                 {link.name}
               </a>
