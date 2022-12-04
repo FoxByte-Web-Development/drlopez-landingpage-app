@@ -1,4 +1,4 @@
-import logoSrc from "../../assets/logoPlaceHolder.png";
+import logoSrc from "../../assets/logo.png";
 import Button from "../Button/button-componet";
 import { useState } from "react";
 
@@ -10,12 +10,12 @@ const NavBar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <div className="top-0 left-0 w-full rounded-lg shadow-md">
-      <div className="items-center justify-between py-4 px-7 md:flex md:px-10">
+    <div className="top-0 left-0 w-ful  rounded-lg shadow-md">
+      <div className="items-center justify-between py-4 px-[74px] md:flex md:px-10">
         <div className="flex cursor-pointer items-center font-bold">
           <span className="cursor-pointer ">
             <img className="inline h-7 px-2" src={logoSrc} />
-            LOGO
+            Dr. Carlos Regalado
           </span>
         </div>
 
@@ -35,7 +35,7 @@ const NavBar = () => {
             <li key={link.name} className="my-7 md:my-0 md:ml-8">
               <a
                 href={link.to}
-                className="hover:underline hover:decoration-teal-2 hover:decoration-4 hover:underline-offset-8"
+                className=" hover:underline hover:decoration-teal-2 hover:decoration-4 hover:underline-offset-8  duration-300"
               >
                 {link.name}
               </a>

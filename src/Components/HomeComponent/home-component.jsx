@@ -6,7 +6,7 @@ import FourPeople from "../../Images/FourPeople.png";
 
 export default function HomeComponent() {
   return (
-    <div className="sm:ml-auto md:ml-[7%] lg:ml-[15%]">
+    <div className="sm:ml-auto md:ml-[1%]">
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
@@ -15,13 +15,13 @@ export default function HomeComponent() {
           <p className="text-primary-color text-5xl font-bold">
             consectetur adipiscing
           </p>
-          <p className="mt-9 text-xl">
+          <p id="homeparagraf" className="mt-9 text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat
           </p>
-          <div className="emailbox mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_200px] gap-x-0 rounded-lg shadow-lg">
+          <div id="box-homepage" className="emailbox h-24 11/12 mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_270px] gap-x-0 rounded-lg shadow-lg">
             <div>
               <div className="elipse mt-6 ml-7 rounded-full">
                 <svg
@@ -48,17 +48,17 @@ export default function HomeComponent() {
               <p className="font-bold">fakeemail@gmail.com</p>
             </div>
             <div>
-              <div className="mt-9">
-                <Button>Get Copied</Button>
+              <div className="mt-8">
+                <Button variant={"primarybig"}>Get Copied</Button>
               </div>
             </div>
           </div>
-          <div className="mt-12 grid grid-cols-[150px_minmax(900px,_1fr)_300px]">
+          <div className="mt-12 grid grid-cols-[230px_minmax(900px,_1fr)_300px]">
             <div>
               <Button variant="secondary">Scroll Down</Button>
             </div>
             <div>
-              <Button variant="secondary">Learn more about vaginoplasty</Button>
+              <Button variant="secondarylearn">Learn more about vaginoplasty</Button>
             </div>
           </div>
         </div>
