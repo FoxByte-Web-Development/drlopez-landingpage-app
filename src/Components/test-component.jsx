@@ -1,5 +1,6 @@
 import NavBar from "./Navbar/navbar-component";
 import HomeComponent from "./HomeComponent/home-component";
+import CircleButton from "./CircleButton/circlebutton-component";
 
 const Test = () => {
   return (
@@ -9,6 +10,7 @@ const Test = () => {
       </div>
       <div className="mt-12">
         <HomeComponent />
+        <CircleButton/>
       </div>
 
     </div>

@@ -4,6 +4,7 @@ import "./home-component.css";
 import FotoDoctor from "../../Images/FotoDoctor.png";
 import FourPeople from "../../Images/FourPeople.png";
 
+
 export default function HomeComponent() {
   return (
     <div className="sm:ml-auto 4/12">
@@ -75,7 +76,9 @@ export default function HomeComponent() {
             </p>
           </div>
         </div>
+        
       </div>
+      
     </div>
   );
 }
