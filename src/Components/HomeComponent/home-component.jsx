@@ -6,7 +6,7 @@ import FourPeople from "../../Images/FourPeople.png";
 
 export default function HomeComponent() {
   return (
-    <div className="sm:ml-auto md:ml-[1%]">
+    <div className="sm:ml-auto 4/12">
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
@@ -21,7 +21,7 @@ export default function HomeComponent() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat
           </p>
-          <div id="box-homepage" className="emailbox h-24 11/12 mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_270px] gap-x-0 rounded-lg shadow-lg">
+          <div id="box-homepage" className="emailbox h-24 11/12 mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_240px] gap-x-0 rounded-lg shadow-lg">
             <div>
               <div className="elipse mt-6 ml-7 rounded-full">
                 <svg
@@ -53,7 +53,7 @@ export default function HomeComponent() {
               </div>
             </div>
           </div>
-          <div className="mt-12 grid grid-cols-[230px_minmax(900px,_1fr)_300px]">
+          <div className="mt-24 grid grid-cols-[230px_minmax(900px,_1fr)_300px]">
             <div>
               <Button variant="secondary">Scroll Down</Button>
             </div>
@@ -62,9 +62,9 @@ export default function HomeComponent() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="w-7/12">
           <div>
-            <img src={FotoDoctor} alt="fotodoctor" />
+            <img className="fotodoctor" src={FotoDoctor} alt="fotodoctor" />
           </div>
           <div className=" text-primary-color ml-[13%] mt-10 font-bold">
             <p>Dr. Carlos Regalado</p>
