@@ -1,0 +1,38 @@
+.OurServices {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 288.26px;
+  height: 5%;
+  text-align: justify;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.imagenservices {
+  padding: 5px;
+}
+
+.title-card {
+  padding-bottom: 2px;
+  padding-top: 11px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.para-card {
+  padding-bottom: 15px;
+}
+
+#cardbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
