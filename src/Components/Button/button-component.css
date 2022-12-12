@@ -12,13 +12,13 @@
   transition: 0.3s;
 }
 
-.btn-primary:hover{
-  background-color: #49B194;
+.btn-primary:hover {
+  background-color: #49b194;
 }
 
 .btn-primarybig {
   background-color: #378972;
-  width:60%;
+  width: 60%;
   height: 2.625rem;
   cursor: pointer;
   border-radius: 30px;
@@ -26,10 +26,9 @@
   transition: 0.3s;
 }
 
-.btn-primarybig:hover{
-  background-color: #49B194;
+.btn-primarybig:hover {
+  background-color: #49b194;
 }
-
 
 .btn-secondary {
   border: 1.5px solid #378972;
@@ -37,15 +36,15 @@
   color: #378972;
   cursor: pointer;
   width: 198px;
-height: 45px;
-transition: 0.3s;
+  height: 45px;
+  transition: 0.3s;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
   background-color: #378972;
   color: white;
 }
-.btn-secondarylearn:hover{
+.btn-secondarylearn:hover {
   background-color: #378972;
   color: white;
 }
@@ -56,6 +55,6 @@ transition: 0.3s;
   color: #378972;
   cursor: pointer;
   width: 300px;
-height: 45px;
-transition: 0.3s;
+  height: 45px;
+  transition: 0.3s;
 }

@@ -1,24 +1,23 @@
-#logoytitulo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#logoytitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#logoytitulo > h1{
+#logoytitulo > h1 {
   font-size: 22px;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: center;
+.navbar-container {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar-links{
-  text-decoration: underline white 2.5px ;
+.navbar-links {
+  text-decoration: underline white 2.5px;
   text-underline-offset: 8px;
   transition: 0.7s;
 }
-.navbar-links:hover{
-  text-decoration: underline #7AC5C8 2.5px ;
+.navbar-links:hover {
+  text-decoration: underline #7ac5c8 2.5px;
   text-underline-offset: 8px;
-
 }

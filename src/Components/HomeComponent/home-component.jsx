@@ -1,13 +1,27 @@
-import React from "react";
+import { useState } from "react";
 import Button from "../Button/button-componet";
 import "./home-component.css";
 import FotoDoctor from "../../Images/FotoDoctor.png";
 import FourPeople from "../../Images/FourPeople.png";
 
-
 export default function HomeComponent() {
+  const drEmailValue = "fakeemail@gmail.com";
+  const [copyText, setCopyText] = useState("Get Copied");
+
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(drEmailValue);
+  };
+
+  const handleEmailCopy = () => {
+    copyEmailToClipboard();
+    setCopyText("Copied!");
+    setTimeout(() => {
+      setCopyText("Get Copied");
+    }, 3000);
+  };
+
   return (
-    <div className="sm:ml-auto 4/12">
+    <div className="4/12 sm:ml-auto">
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
@@ -22,7 +36,10 @@ export default function HomeComponent() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat
           </p>
-          <div id="box-homepage" className="emailbox h-24 11/12 mt-9 grid grid-cols-[100px_minmax(50px,_1fr)_240px] gap-x-0 rounded-lg shadow-lg">
+          <div
+            id="box-homepage"
+            className="emailbox 11/12 mt-9 grid h-24 grid-cols-[100px_minmax(50px,_1fr)_240px] gap-x-0 rounded-lg shadow-lg"
+          >
             <div>
               <div className="elipse mt-6 ml-7 rounded-full">
                 <svg
@@ -46,11 +63,13 @@ export default function HomeComponent() {
             </div>
             <div className="text mt-6">
               <p style={{ color: "#6F6F6F" }}>Our email adress</p>
-              <p className="font-bold">fakeemail@gmail.com</p>
+              <p className="font-bold">{drEmailValue}</p>
             </div>
             <div>
               <div className="mt-8">
-                <Button variant={"primarybig"}>Get Copied</Button>
+                <Button variant={"primarybig"} onClickHandler={handleEmailCopy}>
+                  {copyText}
+                </Button>
               </div>
             </div>
           </div>
@@ -59,7 +78,9 @@ export default function HomeComponent() {
               <Button variant="secondary">Scroll Down</Button>
             </div>
             <div>
-              <Button variant="secondarylearn">Learn more about vaginoplasty</Button>
+              <Button variant="secondarylearn">
+                Learn more about vaginoplasty
+              </Button>
             </div>
           </div>
         </div>
@@ -76,9 +97,7 @@ export default function HomeComponent() {
             </p>
           </div>
         </div>
-        
       </div>
-      
     </div>
   );
 }
