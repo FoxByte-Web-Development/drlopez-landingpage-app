@@ -5,6 +5,7 @@
 }
 #logoytitulo > h1{
   font-size: 22px;
+  font-weight: lighter;
 }
 
 .navbar-container{

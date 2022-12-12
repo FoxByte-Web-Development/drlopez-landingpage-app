@@ -12,6 +12,33 @@
   transition: 0.3s;
 }
 
+.btn-primaryshowmore {
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  display: flex;
+  background-color: #378972;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 7px 25px 7px 25px;
+}
+
+.btn-primaryshowmore:hover {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #49B194;
+  display: flex;
+  
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primaryshowmore > img{
+  margin-left: 10px;
+  width: 14px;
+  
+}
+
 .btn-primary:hover{
   background-color: #49B194;
 }
