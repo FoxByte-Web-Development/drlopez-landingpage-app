@@ -1,7 +1,6 @@
 .emailbox {
   width: 542px;
   height: 108px;
-  
 }
 body {
   margin: 0%;
@@ -14,12 +13,12 @@ body {
   background: #378972;
 }
 
-#box-homepage{
-  background: #F3F3F3;
+#box-homepage {
+  background: #f3f3f3;
   box-shadow: 0px 48px 45px -42px rgba(0, 0, 0, 0.5);
-border-radius: 8px;
+  border-radius: 8px;
 }
-#homeparagraf{
+#homeparagraf {
   width: 34.5rem;
   text-align: justify;
 }
@@ -40,7 +39,7 @@ border-radius: 8px;
   color: #acacac;
 }
 
-.fotodoctor{
+.fotodoctor {
   width: 85%;
   height: 45%;
 }
