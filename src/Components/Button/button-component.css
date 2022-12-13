@@ -6,9 +6,10 @@
   margin-left: 10px;
 }
 
-.btn-primaryshowmore > img {
-  margin-left: 10px;
-  width: 14px;
+.btn-primary {
+  background-color: #378972;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-primaryshowmore {
