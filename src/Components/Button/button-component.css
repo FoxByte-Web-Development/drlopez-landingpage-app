@@ -6,16 +6,6 @@
   margin-left: 10px;
 }
 
-.btn-primaryshowmore:hover {
-  align-items: center;
-  justify-content: space-between;
-  background-color: #49b194;
-  display: flex;
-
-  cursor: pointer;
-  transition: 0.3s;
-}
-
 .btn-primaryshowmore > img {
   margin-left: 10px;
   width: 14px;
