@@ -1,13 +1,15 @@
 import logoSrc from "../../assets/logo.png";
 import Button from "../Button/button-componet";
-import "./navbar-component.css";
 import { useState } from "react";
+import { Text } from "../../contexts/language-context/language-context";
+import LanguageSelector from "../language-selector/language-selector";
+import "./navbar-component.css";
 
 const NavBar = () => {
   const Links = [
-    { name: "Home", to: "/" },
-    { name: "About us", to: "/" },
-    { name: "Services", to: "/" },
+    { textId: "homeNav", to: "/" },
+    { textId: "aboutUsNav", to: "/" },
+    { textId: "servicesNav", to: "/" },
   ];
   const [open, setOpen] = useState(false);
 
@@ -34,17 +36,22 @@ const NavBar = () => {
               open ? "top-20 " : "top-[-490px]"
             }`}
           >
-            {Links.map(link => (
-              <li key={link.name} className="my-7 md:my-0 md:ml-8">
-                <a href={link.to} className="navbar-links">
-                  {link.name}
+            {Links.map(({ textId, to }) => (
+              <li key={textId} className="my-7 md:my-0 md:ml-8">
+                <a href={to} className="navbar-links">
+                  <Text textId={textId} />
                 </a>
               </li>
             ))}
             <div className="px-5">
-              <Button>Contact us</Button>
-              <Button>Location</Button>
+              <Button>
+                <Text textId="contactUsNav" />
+              </Button>
+              <Button>
+                <Text textId="locationNav" />
+              </Button>
             </div>
+            <LanguageSelector />
           </ul>
         </div>
       </div>
