@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 #root {
   margin: 0 auto;
-  padding: 1rem;
+
   padding-top: 3.963rem;
-  padding-left: 6.25rem;
-  padding-right: 6.25rem;
+
   font-family: "Montserrat";
 }

@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.aboutus-container {
+  margin: 0;
+  display: flex;
+  color: white;
+  background-color: #7ac5c8;
+}
+
+.aboutpara-div > h1 {
+  font-size: 36px;
+  text-align: center;
+  text-decoration: underline white 0.5px;
+  text-underline-offset: 15px;
+}
+
+.aboutpara-div {
+  text-align: justify;
+  padding-top: 5%;
+  padding-left: 21%;
+  max-height: 100px;
+  height: 100%;
+  width: 50%;
+  height: 50%;
+}
+
+.aboutpara-div > p {
+  padding-top: 5%;
+}
+
+.img-div > img {
+  width: 428px;
+  height: 687px;
+}
