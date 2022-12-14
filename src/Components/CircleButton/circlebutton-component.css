@@ -1,17 +1,6 @@
-.circulo{
-position: absolute;
-right: 45vw;
-top: 45vw;
-
-}
-
-.circulo:hover > #downarrow{
-    top: 50px;
-}
-
-#downarrow{
-    position: absolute;
-    top: 30px;
-    left: 70px;
-    transition: 700ms linear;
+.circulo {
+  position: fixed;
+  left: 50%;
+  top: 95%;
+  cursor: pointer;
 }

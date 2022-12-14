@@ -11,10 +11,10 @@ const Test = () => {
         <NavBar />
       </div>
       <div className="mt-12">
-        {/* <HomeComponent />
-        <CircleButton/> */}
+        <HomeComponent />
+        <CircleButton />
         {/* <OurServices /> */}
-        <AboutUs />
+        {/* <AboutUs /> */}
       </div>
     </div>
   );

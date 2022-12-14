@@ -21,7 +21,7 @@ export default function HomeComponent() {
   };
 
   return (
-    <div className="4/12 sm:ml-auto">
+    <div id="homepage-container" className="4/12 sm:ml-auto">
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
