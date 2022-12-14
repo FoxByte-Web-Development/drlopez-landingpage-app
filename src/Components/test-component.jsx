@@ -3,6 +3,7 @@ import HomeComponent from "./HomeComponent/home-component";
 import CircleButton from "./CircleButton/circlebutton-component";
 import OurServices from "./OurServices/ourservices-component";
 import AboutUs from "./About us/aboutus-component";
+import Footer from "./Footer/footer-component";
 
 const Test = () => {
   return (
@@ -13,8 +14,9 @@ const Test = () => {
       <div className="mt-12">
         <HomeComponent />
         <CircleButton />
-        {/* <OurServices /> */}
-        {/* <AboutUs /> */}
+        <OurServices />
+        <AboutUs />
+        <Footer />
       </div>
     </div>
   );
