@@ -14,8 +14,9 @@ const Test = () => {
       <div className="mt-12">
         <HomeComponent />
         <CircleButton />
-        <OurServices />
         <AboutUs />
+        <OurServices />
+
         <Footer />
       </div>
     </div>
