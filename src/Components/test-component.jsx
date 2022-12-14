@@ -2,7 +2,7 @@ import NavBar from "./Navbar/navbar-component";
 import HomeComponent from "./HomeComponent/home-component";
 import CircleButton from "./CircleButton/circlebutton-component";
 import OurServices from "./OurServices/ourservices-component";
-
+import SliderShow from "./Slider/SliderShow";
 const Test = () => {
   return (
     <div>
@@ -12,7 +12,8 @@ const Test = () => {
       <div className="mt-12">
         {/* <HomeComponent />
         <CircleButton/> */}
-        <OurServices />
+        {/* <OurServices /> */}
+        <SliderShow />
       </div>
     </div>
   );
