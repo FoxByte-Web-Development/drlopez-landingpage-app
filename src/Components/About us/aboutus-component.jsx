@@ -1,6 +1,7 @@
 import React from "react";
 import "./aboutus-component.css";
 import Doctor from "../../Images/Doctor.png";
+
 export default function AboutUs() {
   return (
     <div className="aboutus-container">

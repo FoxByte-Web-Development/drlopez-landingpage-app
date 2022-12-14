@@ -17,17 +17,16 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <div className="w-auto  rounded-lg shadow-md">
-        <div className="items-center justify-between py-4 px-[100px] px-40 md:flex">
+        <div className="justify-between space-x-80 py-4 px-[40px] md:flex">
           <div className="flex cursor-pointer items-center font-bold">
             <span id="logoytitulo" className="cursor-pointer ">
               <img className="inline h-7 px-2" src={logoSrc} />
               <h1>Dr. Carlos Regalado</h1>
             </span>
           </div>
-
           <div
             onClick={() => setOpen(!open)}
-            className="absolute right-8 top-6 cursor-pointer text-3xl md:hidden"
+            className="absolute  top-6 cursor-pointer text-3xl md:hidden"
           >
             <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
