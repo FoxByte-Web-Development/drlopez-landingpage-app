@@ -1,9 +1,13 @@
 import logoSrc from "../../assets/logo.png";
 import Button from "../Button/button-componet";
+import "./navbar-component.css";
 import { useState } from "react";
 import { Text } from "../../contexts/language-context/language-context";
 import LanguageSelector from "../language-selector/language-selector";
 import "./navbar-component.css";
+import ShorLine from "../../Images/shortline.png";
+import PhoneIcon from "../../Images/phoneicon.png";
+import Map from "../../Images/map.png";
 
 const NavBar = () => {
   const Links = [
@@ -12,21 +16,22 @@ const NavBar = () => {
     { textId: "servicesNav", to: "/" },
   ];
   const [open, setOpen] = useState(false);
+  const [isOpenDrop, setIsOpenDrop] = useState(false);
+  const [isOpenMap, setIsOpenMap] = useState(false);
 
   return (
-    <div id="navbar-container">
+    <div className="navbar-container">
       <div className="w-auto  rounded-lg shadow-md">
-        <div className="items-center justify-between py-4 px-[74px] md:flex md:px-10">
+        <div className="justify-between space-x-80 px-[40px] md:flex">
           <div className="flex cursor-pointer items-center font-bold">
             <span id="logoytitulo" className="cursor-pointer ">
               <img className="inline h-7 px-2" src={logoSrc} />
               <h1>Dr. Carlos Regalado</h1>
             </span>
           </div>
-
           <div
             onClick={() => setOpen(!open)}
-            className="absolute right-8 top-6 cursor-pointer text-3xl md:hidden"
+            className="absolute  top-6 cursor-pointer text-3xl md:hidden"
           >
             <ion-icon name={open ? "close" : "menu"}></ion-icon>
           </div>
@@ -44,12 +49,37 @@ const NavBar = () => {
               </li>
             ))}
             <div className="px-5">
-              <Button>
+              <Button onClickHandler={() => setIsOpenDrop(!isOpenDrop)}>
                 <Text textId="contactUsNav" />
               </Button>
-              <Button>
+              {isOpenDrop && (
+                <div className={"dropdown-contact"}>
+                  <h1>Get in contact</h1>
+                  <img src={ShorLine} alt="" />
+                  <ul>
+                    <div id="first-numer">
+                      <img id="phone" src={PhoneIcon} alt="" />
+                      <li> 000-000-000</li>
+                    </div>
+
+                    <div id="second-numer">
+                      <img id="phone" src={PhoneIcon} alt="" />
+                      <li>000-000-000</li>
+                    </div>
+                  </ul>
+                </div>
+              )}
+              <Button onClickHandler={() => setIsOpenMap(!isOpenMap)}>
                 <Text textId="locationNav" />
               </Button>
+              {isOpenMap && (
+                <div className={"dropdown-contact"}>
+                  <h1>Get Location</h1>
+                  <img id="mapline" src={ShorLine} alt="" />
+                  <img src={Map} alt="" />
+                  <Button variant="primarymap">Open Maps</Button>
+                </div>
+              )}
             </div>
             <LanguageSelector />
           </ul>

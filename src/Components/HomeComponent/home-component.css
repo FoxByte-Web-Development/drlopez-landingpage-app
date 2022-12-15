@@ -23,6 +23,10 @@ body {
   text-align: justify;
 }
 
+#homepage-container {
+  margin-left: 15%;
+}
+
 .text {
   width: 150px;
 }

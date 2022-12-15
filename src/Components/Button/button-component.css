@@ -12,6 +12,15 @@
   transition: 0.3s;
 }
 
+.btn-primarymap {
+  position: absolute;
+  top: 75%;
+  right: 26%;
+  background-color: #378972;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .btn-primaryshowmore {
   align-items: center;
   justify-content: space-between;
@@ -36,6 +45,18 @@
 .btn-primaryshowmore > img {
   margin-left: 10px;
   width: 14px;
+}
+
+.btn-instagram {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  margin-left: 45.5%;
+  background-color: #7ac5c8;
+  border-radius: 45px;
+  border: 1.5px solid white;
+  padding: 10px 28px;
+  color: white;
 }
 
 .btn-primary:hover {
