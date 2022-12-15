@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <div className="w-auto  rounded-lg shadow-md">
-        <div className="justify-between space-x-80 py-4 px-[40px] md:flex">
+        <div className="justify-between space-x-80 px-[40px] md:flex">
           <div className="flex cursor-pointer items-center font-bold">
             <span id="logoytitulo" className="cursor-pointer ">
               <img className="inline h-7 px-2" src={logoSrc} />

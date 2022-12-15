@@ -38,6 +38,18 @@
   width: 14px;
 }
 
+.btn-instagram {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  margin-left: 45.5%;
+  background-color: #7ac5c8;
+  border-radius: 45px;
+  border: 1.5px solid white;
+  padding: 10px 28px;
+  color: white;
+}
+
 .btn-primary:hover {
   background-color: #49b194;
 }
