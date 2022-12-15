@@ -12,6 +12,15 @@
   transition: 0.3s;
 }
 
+.btn-primarymap {
+  position: absolute;
+  top: 75%;
+  right: 26%;
+  background-color: #378972;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .btn-primaryshowmore {
   align-items: center;
   justify-content: space-between;

@@ -5,6 +5,9 @@ import { useState } from "react";
 import { Text } from "../../contexts/language-context/language-context";
 import LanguageSelector from "../language-selector/language-selector";
 import "./navbar-component.css";
+import ShorLine from "../../Images/shortline.png";
+import PhoneIcon from "../../Images/phoneicon.png";
+import Map from "../../Images/map.png";
 
 const NavBar = () => {
   const Links = [
@@ -13,6 +16,8 @@ const NavBar = () => {
     { textId: "servicesNav", to: "/" },
   ];
   const [open, setOpen] = useState(false);
+  const [isOpenDrop, setIsOpenDrop] = useState(false);
+  const [isOpenMap, setIsOpenMap] = useState(false);
 
   return (
     <div className="navbar-container">
@@ -44,12 +49,37 @@ const NavBar = () => {
               </li>
             ))}
             <div className="px-5">
-              <Button>
+              <Button onClickHandler={() => setIsOpenDrop(!isOpenDrop)}>
                 <Text textId="contactUsNav" />
               </Button>
-              <Button>
+              {isOpenDrop && (
+                <div className={"dropdown-contact"}>
+                  <h1>Get in contact</h1>
+                  <img src={ShorLine} alt="" />
+                  <ul>
+                    <div id="first-numer">
+                      <img id="phone" src={PhoneIcon} alt="" />
+                      <li> 000-000-000</li>
+                    </div>
+
+                    <div id="second-numer">
+                      <img id="phone" src={PhoneIcon} alt="" />
+                      <li>000-000-000</li>
+                    </div>
+                  </ul>
+                </div>
+              )}
+              <Button onClickHandler={() => setIsOpenMap(!isOpenMap)}>
                 <Text textId="locationNav" />
               </Button>
+              {isOpenMap && (
+                <div className={"dropdown-contact"}>
+                  <h1>Get Location</h1>
+                  <img id="mapline" src={ShorLine} alt="" />
+                  <img src={Map} alt="" />
+                  <Button variant="primarymap">Open Maps</Button>
+                </div>
+              )}
             </div>
             <LanguageSelector />
           </ul>
