@@ -5,6 +5,7 @@ import DocPic from "../../Images/docpic.png";
 import Arrow from "../../Images/arrow.png";
 import Button from "../Button/button-componet";
 import { func } from "prop-types";
+import { Text } from "../../contexts/language-context/language-context";
 
 export default function OurServices() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,9 @@ export default function OurServices() {
 
   return (
     <div className="ourservices-container">
-      <h1>Our Services</h1>
+      <h1>
+        <Text textId="page3ServiceTitle" />
+      </h1>
 
       <div className="OurServices">
         <div className="Card1">
@@ -35,16 +38,16 @@ export default function OurServices() {
             }}
           >
             <img className="imagenservices" src={DocPic} alt="" />
-            <motion.h2 className="title-card">Vaginoplasty</motion.h2>
+            <motion.h2 className="title-card">
+              <Text textId="page3Card1Title" />
+            </motion.h2>
             <motion.div className="para-card">
               <p>
-                Es el mejoramiento estético por medio quirúrgico de las
-                estructuras vulvares, diseñado para embellecer y rejuvenecer.
+                <Text textId="page3Card1ShortText" />
               </p>
               {isOpen && (
                 <p>
-                  Con este procedimiento tanto la mujer como su pareja logran
-                  aumentar y mejorar las relaciones sexuales.
+                  <Text textId="page3Card1LargeText" />
                 </p>
               )}
             </motion.div>
@@ -86,16 +89,16 @@ export default function OurServices() {
             }}
           >
             <img className="imagenservices" src={DocPic} alt="" />
-            <motion.h2 className="title-card">Gynecology</motion.h2>
+            <motion.h2 className="title-card">
+              <Text textId="page3Card2Title" />
+            </motion.h2>
             <motion.div className="para-card">
               <p>
-                Campo de la medicina que se especializa en la atención de las
-                mujeres durante el embarazo y el parto.
+                <Text textId="page3Card2ShortText" />
               </p>
               {isOpen2 && (
                 <p>
-                  También se especializa en el diagnóstico de enfermedades de
-                  los órganos reproductivos femeninos.
+                  <Text textId="page3Card2LargeText" />
                 </p>
               )}
             </motion.div>
@@ -137,16 +140,16 @@ export default function OurServices() {
             }}
           >
             <img className="imagenservices" src={DocPic} alt="" />
-            <motion.h2 className="title-card">Labioplasty</motion.h2>
+            <motion.h2 className="title-card">
+              <Text textId="page3Card3Title" />
+            </motion.h2>
             <motion.div className="para-card">
               <p>
-                Es una cirugía vaginal para reducir el tamaño de los labios
-                menores de la parte íntima de la mujer.
+                <Text textId="page3Card3ShortText" />
               </p>
               {isOpen3 && (
                 <p>
-                  Que pueden haber crecido y sobresalen de los labios mayores, a
-                  consecuencia de embarazos o traumas del parto.
+                  <Text textId="page3Card3LargeText" />
                 </p>
               )}
             </motion.div>
