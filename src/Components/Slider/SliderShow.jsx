@@ -1,28 +1,31 @@
 import Vagina from "../../Images/Vaginoplasty-SP.png";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+
 import "./SliderShow.css";
 
 const SliderShow = () => {
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500,
-  };
   return (
     <div>
-      <Slider {...settings}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </Slider>
+      <Carousel
+        centerMode={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        dynamicHeight={true}
+      >
+        <div>
+          <img src={Vagina} alt="" />
+        </div>
+        <div>
+          <img src={Vagina} alt="" />
+        </div>
+        <div>
+          <img src={Vagina} alt="" />
+        </div>
+        <div>
+          <img src={Vagina} alt="" />
+        </div>
+      </Carousel>
     </div>
   );
 };

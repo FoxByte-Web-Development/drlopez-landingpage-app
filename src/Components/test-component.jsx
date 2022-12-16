@@ -13,8 +13,10 @@ const Test = () => {
       </div>
       <div className="mt-12">
         {/* <HomeComponent />
-        <CircleButton/> */}
-        <OurServices />
+        <CircleButton/>
+        <OurServices /> */}
+
+        <SliderShow />
       </div>
     </div>
   );
