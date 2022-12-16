@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Text } from "../../contexts/language-context/language-context";
 import Button from "../Button/button-componet";
-import "./home-component.css";
 import FotoDoctor from "../../Images/FotoDoctor.png";
 import FourPeople from "../../Images/FourPeople.png";
+import "./home-component.css";
 
-export default function HomeComponent() {
+const HomeComponent = () => {
   const drEmailValue = "fakeemail@gmail.com";
+  const textChangeDuration = 3000;
   const [copyText, setCopyText] = useState("Get Copied");
 
   const copyEmailToClipboard = () => {
@@ -18,7 +19,7 @@ export default function HomeComponent() {
     setCopyText("Copied!");
     setTimeout(() => {
       setCopyText("Get Copied");
-    }, 3000);
+    }, textChangeDuration);
   };
 
   return (
@@ -98,4 +99,6 @@ export default function HomeComponent() {
       </div>
     </div>
   );
-}
+};
+
+export default HomeComponent;
