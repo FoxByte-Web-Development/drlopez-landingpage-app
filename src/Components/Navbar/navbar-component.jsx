@@ -91,11 +91,8 @@ const NavBar = () => {
                   </h1>
                   <img id="mapline" src={ShorLine} alt="map-img" />
                   <img src={Map} alt="" />
-                  <Button
-                    onClickHandler={() => OpenGoogleMaps()}
-                    variant="primarymap"
-                  >
-                    Open Maps
+                  <Button onClickHandler={OpenGoogleMaps} variant="primarymap">
+                    <Text textId="locationBtn" />
                   </Button>
                 </div>
               )}
