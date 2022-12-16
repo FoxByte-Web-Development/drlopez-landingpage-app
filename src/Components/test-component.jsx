@@ -15,7 +15,6 @@ const Test = () => {
         {/* <HomeComponent />
         <CircleButton/>
         <OurServices /> */}
-
         <SliderShow />
       </div>
     </div>

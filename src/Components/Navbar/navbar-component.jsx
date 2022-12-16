@@ -1,23 +1,33 @@
 import logoSrc from "../../assets/logo.png";
 import Button from "../Button/button-componet";
-import "./navbar-component.css";
 import { useState } from "react";
 import { Text } from "../../contexts/language-context/language-context";
 import LanguageSelector from "../language-selector/language-selector";
-import "./navbar-component.css";
 import ShorLine from "../../Images/shortline.png";
 import PhoneIcon from "../../Images/phoneicon.png";
 import Map from "../../Images/map.png";
+import "./navbar-component.css";
 
 const NavBar = () => {
+  const primaryNumber = "000-000-000";
+  const secondaryNumber = "000-000-000";
+
+  const [open, setOpen] = useState(false);
+  const [isOpenDrop, setIsOpenDrop] = useState(false);
+  const [isOpenMap, setIsOpenMap] = useState(false);
+
   const Links = [
     { textId: "homeNav", to: "/" },
     { textId: "aboutMeNav", to: "/" },
     { textId: "servicesNav", to: "/" },
   ];
-  const [open, setOpen] = useState(false);
-  const [isOpenDrop, setIsOpenDrop] = useState(false);
-  const [isOpenMap, setIsOpenMap] = useState(false);
+
+  const url =
+    "https://www.google.com/maps/place/CECIP+Centro+de+Cirug%C3%ADa+Pl%C3%A1stica+y+Especialidades+en+Rep%C3%BAblica+Dominicana,+Santo+Domingo/@18.4733301,-69.899015,17z/data=!3m1!4b1!4m5!3m4!1s0x8eaf8830679e2e1f:0x17f1016bd0008661!8m2!3d18.4733301!4d-69.8968263";
+
+  const OpenGoogleMaps = () => {
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="navbar-container">
@@ -53,18 +63,20 @@ const NavBar = () => {
                 <Text textId="contactUsNav" />
               </Button>
               {isOpenDrop && (
-                <div className={"dropdown-contact"}>
-                  <h1>Get in contact</h1>
-                  <img src={ShorLine} alt="" />
+                <div className="dropdown-contact">
+                  <h1>
+                    <Text textId="contactInfo" />
+                  </h1>
+                  <img src={ShorLine} alt="line-img" />
                   <ul>
                     <div id="first-numer">
-                      <img id="phone" src={PhoneIcon} alt="" />
-                      <li> 000-000-000</li>
+                      <img id="phone" src={PhoneIcon} alt="phone-icon" />
+                      <li>{primaryNumber}</li>
                     </div>
 
                     <div id="second-numer">
-                      <img id="phone" src={PhoneIcon} alt="" />
-                      <li>000-000-000</li>
+                      <img id="phone" src={PhoneIcon} alt="phone-icon" />
+                      <li>{secondaryNumber}</li>
                     </div>
                   </ul>
                 </div>
@@ -73,11 +85,15 @@ const NavBar = () => {
                 <Text textId="locationNav" />
               </Button>
               {isOpenMap && (
-                <div className={"dropdown-contact"}>
-                  <h1>Get Location</h1>
-                  <img id="mapline" src={ShorLine} alt="" />
+                <div className="dropdown-contact">
+                  <h1>
+                    <Text textId="locationInfo" />
+                  </h1>
+                  <img id="mapline" src={ShorLine} alt="map-img" />
                   <img src={Map} alt="" />
-                  <Button variant="primarymap">Open Maps</Button>
+                  <Button onClickHandler={OpenGoogleMaps} variant="primarymap">
+                    <Text textId="locationBtn" />
+                  </Button>
                 </div>
               )}
             </div>
