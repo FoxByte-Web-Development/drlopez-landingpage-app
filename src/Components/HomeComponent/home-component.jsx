@@ -26,13 +26,13 @@ export default function HomeComponent() {
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
-            <Text textId={"page1Title1"} />
+            <Text textId="page1Title1" />
           </p>
           <p className="text-primary-color text-5xl font-bold">
-            <Text textId={"page1Title2"} />
+            <Text textId="page1Title2" />
           </p>
           <p id="homeparagraf" className="mt-9 text-xl">
-            <Text textId={"page1SubTitle"} />
+            <Text textId="page1SubTitle" />
           </p>
           <div
             id="box-homepage"
@@ -60,12 +60,12 @@ export default function HomeComponent() {
               </div>
             </div>
             <div className="text mt-6">
-              <Text textId={"page1EmailTitle"} />
+              <Text textId="page1EmailTitle" />
               <p className="font-bold">{drEmailValue}</p>
             </div>
             <div>
               <div className="mt-8">
-                <Button variant={"primarybig"} onClickHandler={handleEmailCopy}>
+                <Button variant="primarybig" onClickHandler={handleEmailCopy}>
                   {copyText}
                 </Button>
               </div>
@@ -75,7 +75,7 @@ export default function HomeComponent() {
             <div className="vagina-button">
               <Button variant="secondarylearn">
                 <Text
-                  className={"scrollbutton"}
+                  className="scrollbutton"
                   textId="page1VaginalRejuvenationButton"
                 />
               </Button>
@@ -91,7 +91,7 @@ export default function HomeComponent() {
             <hr className="horizontal-line-color mt-4 ml-2 w-[115px]" />
             <img src={FourPeople} alt="fourpeople" className=" mt-4" />
             <p className=" ml-2 w-[127px] text-center">
-              <Text textId={"page1PatientsSubtitle"} />
+              <Text textId="page1PatientsSubtitle" />
             </p>
           </div>
         </div>
