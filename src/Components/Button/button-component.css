@@ -14,8 +14,9 @@
 
 .btn-primarymap {
   position: absolute;
-  top: 75%;
-  right: 26%;
+  top: 72%;
+  font-size: 13px;
+  right: 30%;
   background-color: #378972;
   cursor: pointer;
   transition: 0.3s;
@@ -101,7 +102,7 @@
   background-color: white;
   color: #378972;
   cursor: pointer;
-  width: 300px;
-  height: 45px;
+  width: 600px;
+  height: 60px;
   transition: 0.3s;
 }

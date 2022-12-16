@@ -12,7 +12,7 @@ import Map from "../../Images/map.png";
 const NavBar = () => {
   const Links = [
     { textId: "homeNav", to: "/" },
-    { textId: "aboutUsNav", to: "/" },
+    { textId: "aboutMeNav", to: "/" },
     { textId: "servicesNav", to: "/" },
   ];
   const [open, setOpen] = useState(false);

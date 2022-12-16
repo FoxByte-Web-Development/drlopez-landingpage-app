@@ -3,6 +3,7 @@ import Button from "../Button/button-componet";
 import Instagram from "../../Images/instagram.png";
 import Line from "../../Images/footerline.png";
 import "./footer-component.css";
+import { Text } from "../../contexts/language-context/language-context";
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -10,8 +11,7 @@ export default function Footer() {
     <footer>
       <h1>DR. CARLOS REGALADO</h1>
       <p id="footer-para">
-        Sigueme en mi red social de Instagram, para ver más contenido
-        relacionado a mi servicio.
+        <Text textId="footerSubTitle" />
       </p>
       <Button variant="instagram">
         <img id="logo-ig" src={Instagram} alt="" />

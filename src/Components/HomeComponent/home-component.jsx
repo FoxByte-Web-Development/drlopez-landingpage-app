@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Text } from "../../contexts/language-context/language-context";
 import Button from "../Button/button-componet";
 import "./home-component.css";
 import FotoDoctor from "../../Images/FotoDoctor.png";
@@ -25,16 +26,13 @@ export default function HomeComponent() {
       <div className="grid grid-flow-row grid-cols-2 gap-x-96">
         <div className="mt-10 text-left">
           <p className="text-secundary-color text-5xl font-bold ">
-            Lorem ipsum dolor sit amet
+            <Text textId={"page1Title1"} />
           </p>
           <p className="text-primary-color text-5xl font-bold">
-            consectetur adipiscing
+            <Text textId={"page1Title2"} />
           </p>
           <p id="homeparagraf" className="mt-9 text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat
+            <Text textId={"page1SubTitle"} />
           </p>
           <div
             id="box-homepage"
@@ -62,7 +60,7 @@ export default function HomeComponent() {
               </div>
             </div>
             <div className="text mt-6">
-              <p style={{ color: "#6F6F6F" }}>Our email adress</p>
+              <Text textId={"page1EmailTitle"} />
               <p className="font-bold">{drEmailValue}</p>
             </div>
             <div>
@@ -74,12 +72,12 @@ export default function HomeComponent() {
             </div>
           </div>
           <div className="mt-24 grid grid-cols-[230px_minmax(900px,_1fr)_300px]">
-            <div>
-              <Button variant="secondary">Scroll Down</Button>
-            </div>
-            <div>
+            <div className="vagina-button">
               <Button variant="secondarylearn">
-                Learn more about vaginoplasty
+                <Text
+                  className={"scrollbutton"}
+                  textId="page1VaginalRejuvenationButton"
+                />
               </Button>
             </div>
           </div>
@@ -93,7 +91,7 @@ export default function HomeComponent() {
             <hr className="horizontal-line-color mt-4 ml-2 w-[115px]" />
             <img src={FourPeople} alt="fourpeople" className=" mt-4" />
             <p className=" ml-2 w-[127px] text-center">
-              patients have chosen his service
+              <Text textId={"page1PatientsSubtitle"} />
             </p>
           </div>
         </div>
