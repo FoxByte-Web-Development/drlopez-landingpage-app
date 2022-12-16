@@ -12,17 +12,19 @@ const SliderShow = () => {
         infiniteLoop={true}
         showThumbs={false}
         dynamicHeight={true}
+        showStatus={false}
+        centerSlidePercentage={75}
       >
-        <div>
+        <div className="div-margins">
           <img src={Vagina} alt="" />
         </div>
-        <div>
+        <div className="div-margins">
           <img src={Vagina} alt="" />
         </div>
-        <div>
+        <div className="div-margins">
           <img src={Vagina} alt="" />
         </div>
-        <div>
+        <div className="div-margins">
           <img src={Vagina} alt="" />
         </div>
       </Carousel>
