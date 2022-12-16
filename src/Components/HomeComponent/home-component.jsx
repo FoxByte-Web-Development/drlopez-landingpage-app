@@ -1,14 +1,22 @@
-import { useState } from "react";
-import { Text } from "../../contexts/language-context/language-context";
+import { useState, useContext, useEffect } from "react";
+import {
+  Text,
+  LanguageContext,
+} from "../../contexts/language-context/language-context";
 import Button from "../Button/button-componet";
 import FotoDoctor from "../../Images/FotoDoctor.png";
 import FourPeople from "../../Images/FourPeople.png";
 import "./home-component.css";
 
 const HomeComponent = () => {
+  const { dictionary } = useContext(LanguageContext);
   const drEmailValue = "fakeemail@gmail.com";
   const textChangeDuration = 3000;
-  const [copyText, setCopyText] = useState("Get Copied");
+  const [copyText, setCopyText] = useState(dictionary.page1CopyButton);
+
+  useEffect(() => {
+    setCopyText(dictionary.page1CopyButton);
+  }, [dictionary.page1CopyButton]);
 
   const copyEmailToClipboard = () => {
     navigator.clipboard.writeText(drEmailValue);
@@ -16,9 +24,9 @@ const HomeComponent = () => {
 
   const handleEmailCopy = () => {
     copyEmailToClipboard();
-    setCopyText("Copied!");
+    setCopyText(dictionary.page1CopyButton2);
     setTimeout(() => {
-      setCopyText("Get Copied");
+      setCopyText(dictionary.page1CopyButton);
     }, textChangeDuration);
   };
 
