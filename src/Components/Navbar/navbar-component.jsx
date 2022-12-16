@@ -19,6 +19,13 @@ const NavBar = () => {
   const [isOpenDrop, setIsOpenDrop] = useState(false);
   const [isOpenMap, setIsOpenMap] = useState(false);
 
+  const url =
+    "https://www.google.com/maps/place/CECIP+Centro+de+Cirug%C3%ADa+Pl%C3%A1stica+y+Especialidades+en+Rep%C3%BAblica+Dominicana,+Santo+Domingo/@18.4733301,-69.899015,17z/data=!3m1!4b1!4m5!3m4!1s0x8eaf8830679e2e1f:0x17f1016bd0008661!8m2!3d18.4733301!4d-69.8968263";
+
+  const OpenGoogleMaps = () => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="navbar-container">
       <div className="w-auto  rounded-lg shadow-md">
@@ -77,7 +84,12 @@ const NavBar = () => {
                   <h1>Get Location</h1>
                   <img id="mapline" src={ShorLine} alt="" />
                   <img src={Map} alt="" />
-                  <Button variant="primarymap">Open Maps</Button>
+                  <Button
+                    onClickHandler={() => OpenGoogleMaps()}
+                    variant="primarymap"
+                  >
+                    Open Maps
+                  </Button>
                 </div>
               )}
             </div>
