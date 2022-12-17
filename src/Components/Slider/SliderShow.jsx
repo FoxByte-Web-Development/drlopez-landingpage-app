@@ -1,5 +1,6 @@
 import Vagina from "../../Images/Vaginoplasty-SP.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Text } from "../../contexts/language-context/language-context";
 import { Carousel } from "react-responsive-carousel";
 
 import "./SliderShow.css";
@@ -7,6 +8,9 @@ import "./SliderShow.css";
 const SliderShow = () => {
   return (
     <div>
+      <div className="text-setting flex justify-center text-xl lg:text-5xl">
+        <Text textId="page4CarouselTitle" />
+      </div>
       <Carousel
         centerMode={true}
         infiniteLoop={true}
