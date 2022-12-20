@@ -12,10 +12,13 @@ const Test = () => {
         <NavBar />
       </div>
       <div className="mt-12">
-        {/* <HomeComponent />
-        <CircleButton/>
-        <OurServices /> */}
-        <SliderShow />
+        <HomeComponent />
+        <AboutUs />
+        <OurServices />
+        <div className=" mb-[200px] mt-[-2%]	">
+          <SliderShow />
+        </div>
+        <Footer />
       </div>
     </div>
   );

@@ -95,11 +95,11 @@ const HomeComponent = () => {
           <div>
             <img className="fotodoctor" src={FotoDoctor} alt="fotodoctor" />
           </div>
-          <div className=" text-primary-color ml-[13%] mt-10 font-bold">
+          <div className=" text-primary-color margin-text mt-10 font-bold">
             <p>Dr. Carlos Regalado</p>
-            <hr className="horizontal-line-color mt-4 ml-2 w-[115px]" />
-            <img src={FourPeople} alt="fourpeople" className=" mt-4" />
-            <p className=" ml-2 w-[127px] text-center">
+            <hr className="horizontal-line-color mt-4 ml-5 w-[115px]" />
+            <img src={FourPeople} alt="fourpeople" className=" mt-4 ml-3" />
+            <p className=" ml-4 w-[127px] text-center">
               <Text textId="page1PatientsSubtitle" />
             </p>
           </div>
