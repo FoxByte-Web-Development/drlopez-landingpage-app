@@ -33,7 +33,7 @@ body {
 }
 
 .vagina-button {
-  margin-right: 5%;
+  margin-left: -5%;
 }
 
 .text {
@@ -55,4 +55,16 @@ body {
 .fotodoctor {
   width: 85%;
   height: 45%;
+}
+
+@media (min-width: 1850px) {
+  .margin-text {
+    margin-left: 75px;
+  }
+}
+
+@media (min-width: 2450px) {
+  .margin-text {
+    margin-left: 145px;
+  }
 }

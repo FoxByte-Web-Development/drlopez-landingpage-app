@@ -4,7 +4,7 @@ import CircleButton from "./CircleButton/circlebutton-component";
 import OurServices from "./OurServices/ourservices-component";
 import AboutUs from "./About us/aboutus-component";
 import Footer from "./Footer/footer-component";
-
+import SliderShow from "./Slider/SliderShow";
 const Test = () => {
   return (
     <div>
@@ -13,9 +13,11 @@ const Test = () => {
       </div>
       <div className="mt-12">
         <HomeComponent />
-        <CircleButton />
         <AboutUs />
         <OurServices />
+        <div className=" mb-[200px] mt-[-2%]	">
+          <SliderShow />
+        </div>
         <Footer />
       </div>
     </div>
