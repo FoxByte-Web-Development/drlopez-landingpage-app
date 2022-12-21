@@ -52,6 +52,45 @@ const SliderShow = () => {
   if (userLanguage == "en") {
     return (
       <div>
+        <div className=" sm:hidden">
+          <div className="text-setting title flex justify-center text-xl lg:text-5xl">
+            <Text textId="page4CarouselTitle" />
+          </div>
+          <Carousel
+            centerMode={true}
+            showThumbs={false}
+            dynamicHeight={true}
+            showStatus={false}
+            centerSlidePercentage={100}
+            infiniteLoop={true}
+            swipeable={false}
+          >
+            {englishImages.map(el => el)}
+          </Carousel>
+        </div>
+
+        <div className=" hidden sm:block">
+          <div className="text-setting title flex justify-center text-xl lg:text-5xl">
+            <Text textId="page4CarouselTitle" />
+          </div>
+          <Carousel
+            centerMode={true}
+            showThumbs={false}
+            dynamicHeight={true}
+            showStatus={false}
+            centerSlidePercentage={75}
+            infiniteLoop={true}
+            swipeable={false}
+          >
+            {englishImages.map(el => el)}
+          </Carousel>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <div className=" block sm:hidden">
         <div className="text-setting title flex justify-center text-xl lg:text-5xl">
           <Text textId="page4CarouselTitle" />
         </div>
@@ -60,31 +99,30 @@ const SliderShow = () => {
           showThumbs={false}
           dynamicHeight={true}
           showStatus={false}
-          centerSlidePercentage={75}
+          centerSlidePercentage={100}
           infiniteLoop={true}
           swipeable={false}
         >
-          {englishImages.map(el => el)}
+          {spanishImages.map(el => el)}
         </Carousel>
       </div>
-    );
-  }
-  return (
-    <div>
-      <div className="text-setting flex justify-center text-xl lg:text-5xl ">
-        <Text textId="page4CarouselTitle" />
+
+      <div className=" hidden sm:block">
+        <div className="text-setting title flex justify-center text-xl lg:text-5xl">
+          <Text textId="page4CarouselTitle" />
+        </div>
+        <Carousel
+          centerMode={true}
+          showThumbs={false}
+          dynamicHeight={true}
+          showStatus={false}
+          centerSlidePercentage={50}
+          infiniteLoop={true}
+          swipeable={false}
+        >
+          {spanishImages.map(el => el)}
+        </Carousel>
       </div>
-      <Carousel
-        centerMode={true}
-        showThumbs={false}
-        dynamicHeight={true}
-        showStatus={false}
-        centerSlidePercentage={75}
-        infiniteLoop={true}
-        swipeable={false}
-      >
-        {spanishImages.map(el => el)}
-      </Carousel>
     </div>
   );
 };
