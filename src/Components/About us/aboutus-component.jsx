@@ -9,14 +9,14 @@ const AboutUs = () => {
       <div className="img-div">
         <img src={Doctor} alt="doctor-about-us-img" />
       </div>
-      <div className="aboutpara-div">
-        <h1>
+      <div id="about-para-div" className="aboutpara-div">
+        <h1 id="about-title">
           <Text textId="page2AboutTitle" />
         </h1>
-        <p>
+        <p id="about-text1">
           <Text textId="page2AboutText1" />
         </p>
-        <p>
+        <p id="about-text2">
           <Text textId="page2AboutText2" />
         </p>
       </div>

@@ -9,14 +9,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <h1>DR. CARLOS REGALADO</h1>
+      <h1 id="footer-title">DR. CARLOS REGALADO</h1>
       <p id="footer-para">
         <Text textId="footerSubTitle" />
       </p>
-      <Button variant="instagram">
-        <img id="logo-ig" src={Instagram} alt="footer-logo" />
-        Instagram
-      </Button>
+      <div className="ig-btn-container">
+        <Button variant="instagram">
+          <img id="logo-ig" src={Instagram} alt="footer-logo" />
+          Instagram
+        </Button>
+      </div>
       <img id="linea-footer" src={Line}></img>
       <p id="copyright">{`Copyright ©${year}. Design and powered by Foxbyte Software Development `}</p>
     </footer>

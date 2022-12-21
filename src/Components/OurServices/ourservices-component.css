@@ -5,6 +5,7 @@
   align-items: center;
   margin-left: 3%;
   margin-top: -5%;
+  margin-bottom: 6%;
 }
 
 .ourservices-container > h1 {
@@ -95,7 +96,6 @@
   padding-top: 11px;
   font-size: 18px;
   padding-left: 5px;
-
   font-weight: 800;
 }
 
@@ -111,4 +111,34 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .OurServices {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    margin-top: -5%;
+    margin-bottom: 6%;
+    flex-wrap: wrap;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card1v2,
+  .card2v2,
+  .card3v2 {
+    margin-bottom: 20%;
+    margin-right: 0;
+    margin-left: -2%;
+  }
+
+  #ourservices-title {
+    margin-bottom: 10%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
