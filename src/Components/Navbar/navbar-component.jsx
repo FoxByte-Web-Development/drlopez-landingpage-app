@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import LanguageSelector from "../language-selector/language-selector";
-import Logo from "../../assets/logo.png";
-import Button from "../Button/button-componet";
 import { Text } from "../../contexts/language-context/language-context";
+import LanguageSelector from "../language-selector/language-selector";
+import Button from "../Button/button-componet";
+import Logo from "../../assets/logo.png";
 import ShorLine from "../../Images/shortline.png";
 import PhoneIcon from "../../Images/phoneicon.png";
 import Map from "../../Images/map.png";
@@ -139,7 +139,6 @@ const NavBar = () => {
               </div>
             </div>
           </div>
-
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigationLinks.map(item => (
