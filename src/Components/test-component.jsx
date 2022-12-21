@@ -11,7 +11,7 @@ const Test = () => {
       <div>
         <NavBar />
       </div>
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <HomeComponent />
         <AboutUs />
         <OurServices />
@@ -19,7 +19,7 @@ const Test = () => {
           <SliderShow />
         </div>
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
