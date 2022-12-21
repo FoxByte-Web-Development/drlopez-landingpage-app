@@ -21,31 +21,31 @@ const SliderShow = () => {
   const { userLanguage } = useContext(LanguageContext);
 
   const englishImages = [
-    <div className="div-margins">
+    <div key={1} className="div-margins">
       <img src={Vaginoplasty} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={2} className="div-margins">
       <img src={Perinoplasty} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={3} className="div-margins">
       <img src={Labiaplasty} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={4} className="div-margins">
       <img src={Hymenoplasty} alt="" />
     </div>,
   ];
 
   const spanishImages = [
-    <div className="div-margins">
+    <div key={1} className="div-margins">
       <img src={Vaginoplastia} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={2} className="div-margins">
       <img src={Perinoplastia} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={3} className="div-margins">
       <img src={Labioplastia} alt="" />
     </div>,
-    <div className="div-margins">
+    <div key={4} className="div-margins">
       <img src={Himenoplastia} alt="" />
     </div>,
   ];
