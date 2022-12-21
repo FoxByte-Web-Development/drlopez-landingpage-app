@@ -1,6 +1,6 @@
-import { Fragment, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { Disclosure, Menu } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LanguageSelector from "../language-selector/language-selector";
 import Logo from "../../assets/logo.png";
 import Button from "../Button/button-componet";
@@ -10,33 +10,29 @@ import PhoneIcon from "../../Images/phoneicon.png";
 import Map from "../../Images/map.png";
 import "./navbar-component.css";
 
-const navigation = [
-  { textId: "homeNav", href: "#", current: true },
-  { textId: "aboutMeNav", href: "#", current: false },
-  { textId: "servicesNav", href: "#", current: false },
-];
-
-function classNames(...classes) {
+const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
-}
+};
 
-export default function NavBar() {
+const NavBar = () => {
   const [isOpenDrop, setIsOpenDrop] = useState(false);
   const [isOpenMap, setIsOpenMap] = useState(false);
 
   const primaryNumber = "000-000-000";
   const secondaryNumber = "000-000-000";
-  const url =
-    "https://www.google.com/maps/place/CECIP+Centro+de+Cirug%C3%ADa+Pl%C3%A1stica+y+Especialidades+en+Rep%C3%BAblica+Dominicana,+Santo+Domingo/@18.4733301,-69.899015,17z/data=!3m1!4b1!4m5!3m4!1s0x8eaf8830679e2e1f:0x17f1016bd0008661!8m2!3d18.4733301!4d-69.8968263";
-  const Links = [
-    { textId: "homeNav", to: "/" },
-    { textId: "aboutMeNav", to: "/" },
-    { textId: "servicesNav", to: "/" },
+
+  const locationUrl = "https://goo.gl/maps/ck5yZTAgM9gXZYVA9";
+
+  const navigationLinks = [
+    { textId: "homeNav", to: "/", current: true },
+    { textId: "aboutMeNav", to: "/", current: false },
+    { textId: "servicesNav", to: "/", current: false },
   ];
 
-  const OpenGoogleMaps = () => {
-    window.open(url, "_blank");
+  const openGoogleMaps = () => {
+    window.open(locationUrl, "_blank");
   };
+
   return (
     <Disclosure as="nav" className="bg-gray-800 ">
       {({ open }) => (
@@ -46,7 +42,6 @@ export default function NavBar() {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-white inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset">
-                  <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -75,7 +70,7 @@ export default function NavBar() {
                   <div className=" flex items-center justify-between">
                     <div className="hidden sm:ml-6 sm:block">
                       <ul className="flex space-x-4">
-                        {Links.map(({ textId, to }) => (
+                        {navigationLinks.map(({ textId, to }) => (
                           <li key={textId} className="my-7 md:my-0 md:ml-8">
                             <a href={to} className="navbar-links">
                               <Text textId={textId} />
@@ -128,7 +123,7 @@ export default function NavBar() {
                               <img id="mapline" src={ShorLine} alt="map-img" />
                               <img src={Map} alt="" />
                               <Button
-                                onClickHandler={OpenGoogleMaps}
+                                onClickHandler={openGoogleMaps}
                                 variant="primarymap"
                               >
                                 <Text textId="locationBtn" />
@@ -140,57 +135,6 @@ export default function NavBar() {
                     </div>
                     <LanguageSelector />
                   </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="bg-white ring-black absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "text-gray-700 block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "text-gray-700 block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "text-gray-700 block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
                 </Menu>
               </div>
             </div>
@@ -198,11 +142,11 @@ export default function NavBar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
-              {navigation.map(item => (
+              {navigationLinks.map(item => (
                 <Disclosure.Button
                   key={item.textId}
                   as="a"
-                  href={item.href}
+                  href={item.to}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
@@ -215,7 +159,7 @@ export default function NavBar() {
                 </Disclosure.Button>
               ))}
 
-              <Button onClickHandler={() => OpenGoogleMaps()}>
+              <Button onClickHandler={() => openGoogleMaps()}>
                 <Text textId="locationNav" />
               </Button>
               <Button onClickHandler={() => setIsOpenDrop(!isOpenDrop)}>
@@ -246,4 +190,6 @@ export default function NavBar() {
       )}
     </Disclosure>
   );
-}
+};
+
+export default NavBar;
