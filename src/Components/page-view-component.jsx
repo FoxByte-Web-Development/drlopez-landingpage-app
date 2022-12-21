@@ -1,5 +1,5 @@
 import NavBar from "./Navbar/navbar-component";
-import Homev2 from "./HomeComponent/homev2";
+import Home from "./HomeComponent/home-component";
 import OurServices from "./OurServices/ourservices-component";
 import AboutUs from "./About us/aboutus-component";
 import Footer from "./Footer/footer-component";
@@ -12,7 +12,7 @@ const PageView = () => {
         <NavBar />
       </div>
       <div className="mt-12">
-        <Homev2 />
+        <Home />
         <AboutUs />
         <OurServices />
         <div className="mb-[200px] mt-[-2%]">
