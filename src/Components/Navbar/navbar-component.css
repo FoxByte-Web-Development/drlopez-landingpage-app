@@ -73,3 +73,15 @@
   text-decoration: underline #7ac5c8 2.5px;
   text-underline-offset: 8px;
 }
+
+.modal-title-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #378972;
+  text-align: center;
+}
+
+.phone-number {
+  font-size: 1rem;
+  color: #378972;
+}
