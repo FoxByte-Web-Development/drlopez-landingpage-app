@@ -80,7 +80,7 @@ const Home = () => {
           id="doctor-info-home"
           className=" text-primary-color margin-text mt-10 font-bold"
         >
-          <div>
+          <div id="four-people">
             <p>Dr. Carlos Regalado</p>
             <hr className="horizontal-line-color mt-4 ml-5 w-[115px]" />
             <img src={FourPeople} alt="fourpeople" className=" mt-4 ml-3" />
