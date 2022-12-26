@@ -8,9 +8,9 @@ import SliderShow from "./Slider/SliderShow";
 const PageView = () => {
   return (
     <div>
-      {/* <div>
+      <div>
         <NavBar />
-      </div> */}
+      </div>
       <div className="mt-12">
         <Home />
         <AboutUs />
@@ -18,7 +18,7 @@ const PageView = () => {
         <div className="mb-[200px] mt-[-2%]">
           <SliderShow />
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

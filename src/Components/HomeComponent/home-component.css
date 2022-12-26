@@ -57,6 +57,24 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  #four-people {
+    margin-left: 14%;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  #four-people {
+    margin-left: -25%;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  #four-people {
+    margin-left: 10%;
+  }
+}
+
 .emailbox {
   width: 542px;
   height: 108px;
