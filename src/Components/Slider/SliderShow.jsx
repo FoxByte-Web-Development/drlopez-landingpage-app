@@ -106,23 +106,24 @@ const SliderShow = () => {
           {spanishImages.map(el => el)}
         </Carousel>
       </div>
-
-      <div className=" hidden sm:block">
-        <div className="text-setting title flex justify-center text-xl lg:text-5xl">
-          <Text textId="page4CarouselTitle" />
-        </div>
-        <Carousel
-          centerMode={true}
-          showThumbs={false}
-          dynamicHeight={true}
-          showStatus={false}
-          centerSlidePercentage={50}
-          infiniteLoop={true}
-          swipeable={false}
-        >
-          {spanishImages.map(el => el)}
-        </Carousel>
+    );
+  }
+  return (
+    <div>
+      <div className="text-setting flex justify-center text-xl lg:text-5xl ">
+        <Text textId="page4CarouselTitle" />
       </div>
+      <Carousel
+        centerMode={true}
+        showThumbs={false}
+        dynamicHeight={true}
+        showStatus={false}
+        centerSlidePercentage={75}
+        infiniteLoop={true}
+        swipeable={false}
+      >
+        {spanishImages.map(el => el)}
+      </Carousel>
     </div>
   );
 };

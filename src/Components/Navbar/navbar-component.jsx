@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Text } from "../../contexts/language-context/language-context";
+import { Modal, Box } from "@mui/material";
 import LanguageSelector from "../language-selector/language-selector";
 import Button from "../Button/button-componet";
 import Logo from "../../assets/logo.png";
@@ -14,9 +15,23 @@ const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
 };
 
+const modalStyles = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 300,
+  bgcolor: "background.paper",
+  borderRadius: "7px",
+  border: "2px solid #7ac5c8",
+  boxShadow: 24,
+  p: 4,
+};
+
 const NavBar = () => {
   const [isOpenDrop, setIsOpenDrop] = useState(false);
   const [isOpenMap, setIsOpenMap] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const primaryNumber = "000-000-000";
   const secondaryNumber = "000-000-000";
@@ -24,14 +39,17 @@ const NavBar = () => {
   const locationUrl = "https://goo.gl/maps/ck5yZTAgM9gXZYVA9";
 
   const navigationLinks = [
-    { textId: "homeNav", to: "/", current: true },
-    { textId: "aboutMeNav", to: "/", current: false },
-    { textId: "servicesNav", to: "/", current: false },
+    { textId: "homeNav", to: "#home-component", current: true },
+    { textId: "aboutMeNav", to: "#about-us", current: false },
+    { textId: "servicesNav", to: "#our-services", current: false },
   ];
 
   const openGoogleMaps = () => {
     window.open(locationUrl, "_blank");
   };
+
+  const handleModalOpen = () => setOpenModal(true);
+  const handleModalClose = () => setOpenModal(false);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -67,7 +85,6 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div className=" flex items-center justify-between">
                     <div className="hidden sm:ml-6 sm:block">
@@ -164,30 +181,30 @@ const NavBar = () => {
               <Button onClickHandler={() => openGoogleMaps()}>
                 <Text textId="locationNav" />
               </Button>
-              <Button onClickHandler={() => setIsOpenDrop(!isOpenDrop)}>
+              <Button onClickHandler={() => handleModalOpen()}>
                 <Text textId="contactUsNav" />
               </Button>
-              {isOpenDrop && (
-                <div className="dropdown-contact">
-                  <h1>
-                    <Text textId="contactInfo" />
-                  </h1>
-                  <img src={ShorLine} alt="line-img" />
-                  <ul>
-                    <div id="first-numer">
-                      <img id="phone" src={PhoneIcon} alt="phone-icon" />
-                      <li>{primaryNumber}</li>
-                    </div>
-
-                    <div id="second-numer">
-                      <img id="phone" src={PhoneIcon} alt="phone-icon" />
-                      <li>{secondaryNumber}</li>
-                    </div>
-                  </ul>
-                </div>
-              )}
             </div>
           </Disclosure.Panel>
+          {/*Contact us mobile modal*/}
+          <Modal open={openModal} onClose={handleModalClose}>
+            <Box sx={modalStyles}>
+              <h1 className="modal-title-text">
+                <Text textId="contactInfo" />
+              </h1>
+              <img src={ShorLine} alt="line-img" />
+              <ul>
+                <div>
+                  <img src={PhoneIcon} alt="phone-icon" />
+                  <li className="phone-number">{primaryNumber}</li>
+                </div>
+                <div>
+                  <img src={PhoneIcon} alt="phone-icon" />
+                  <li className="phone-number">{secondaryNumber}</li>
+                </div>
+              </ul>
+            </Box>
+          </Modal>
         </>
       )}
     </Disclosure>
