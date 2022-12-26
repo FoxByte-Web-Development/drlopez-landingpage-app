@@ -19,7 +19,7 @@ export default function OurServices() {
   const [rotate3, setRotate3] = useState(false);
 
   return (
-    <div className="ourservices-container">
+    <div id="our-services" className="ourservices-container">
       <h1 id="ourservices-title">
         <Text textId="page3ServiceTitle" />
       </h1>

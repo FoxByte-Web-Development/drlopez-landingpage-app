@@ -39,9 +39,9 @@ const NavBar = () => {
   const locationUrl = "https://goo.gl/maps/ck5yZTAgM9gXZYVA9";
 
   const navigationLinks = [
-    { textId: "homeNav", to: "/", current: true },
-    { textId: "aboutMeNav", to: "/", current: false },
-    { textId: "servicesNav", to: "/", current: false },
+    { textId: "homeNav", to: "#home-component", current: true },
+    { textId: "aboutMeNav", to: "#about-us", current: false },
+    { textId: "servicesNav", to: "#our-services", current: false },
   ];
 
   const openGoogleMaps = () => {

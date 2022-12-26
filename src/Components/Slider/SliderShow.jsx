@@ -51,7 +51,7 @@ const SliderShow = () => {
   ];
   if (userLanguage == "en") {
     return (
-      <div>
+      <div id="slider-view">
         <div className="text-setting title flex justify-center text-xl lg:text-5xl">
           <Text textId="page4CarouselTitle" />
         </div>
@@ -70,7 +70,7 @@ const SliderShow = () => {
     );
   }
   return (
-    <div>
+    <div id="slider-view">
       <div className="text-setting flex justify-center text-xl lg:text-5xl ">
         <Text textId="page4CarouselTitle" />
       </div>

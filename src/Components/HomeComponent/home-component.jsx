@@ -23,6 +23,12 @@ const Home = () => {
     navigator.clipboard.writeText(drEmailValue);
   };
 
+  const scrollIntoSlider = () => {
+    document
+      .getElementById("slider-view")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+
   const handleEmailCopy = () => {
     copyEmailToClipboard();
     setCopyText(dictionary.page1CopyButton2);
@@ -30,8 +36,9 @@ const Home = () => {
       setCopyText(dictionary.page1CopyButton);
     }, textChangeDuration);
   };
+
   return (
-    <div className="home-container">
+    <div id="home-component" className="home-container">
       <div className="left-side">
         <p id="home-title" className="text-secundary-color font-bold ">
           <Text textId="page1Title1" />
@@ -58,7 +65,7 @@ const Home = () => {
             {copyText}
           </Button>
         </div>
-        <Button variant="secondarylearn">
+        <Button variant="secondarylearn" onClickHandler={scrollIntoSlider}>
           <Text
             className="scrollbutton"
             textId="page1VaginalRejuvenationButton"
