@@ -33,8 +33,10 @@ const NavBar = () => {
   const [isOpenMap, setIsOpenMap] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const primaryNumber = "000-000-000";
-  const secondaryNumber = "000-000-000";
+  // Celular
+  const primaryNumber = " 809-696-3932";
+  // Consultorio
+  const secondaryNumber = "809-686-1954";
 
   const locationUrl = "https://goo.gl/maps/ck5yZTAgM9gXZYVA9";
 

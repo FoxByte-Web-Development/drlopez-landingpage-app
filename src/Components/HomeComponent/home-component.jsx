@@ -11,7 +11,7 @@ import "./home-component.css";
 
 const Home = () => {
   const { dictionary } = useContext(LanguageContext);
-  const drEmailValue = "fakeemail@gmail.com";
+  const drEmailValue = "dr.carlosregalado@hotmail.com";
   const textChangeDuration = 3000;
   const [copyText, setCopyText] = useState(dictionary.page1CopyButton);
 
