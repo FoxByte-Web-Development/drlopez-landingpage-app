@@ -9,16 +9,16 @@ const PageView = () => {
   return (
     <div>
       <div>
-        {/* <NavBar />
+        <NavBar />
       </div>
       <div className="mt-12">
         <Home />
         <AboutUs />
-        <OurServices /> */}
+        <OurServices />
         <div className="mb-[200px] mt-[-2%]">
           <SliderShow />
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
