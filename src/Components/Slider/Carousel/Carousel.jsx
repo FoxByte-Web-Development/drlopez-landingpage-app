@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevIndex = (currentIndex - 1);
-  const nextIndex = (currentIndex + 1);
+  const prevIndex = (currentIndex - 1 < 0 ? images.length - 1 : currentIndex - 1);
+  const nextIndex = (currentIndex + 1 >= images.length ? 0 : currentIndex + 1);
 
   return (
       <div>
